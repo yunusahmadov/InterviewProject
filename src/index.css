@@ -9,12 +9,20 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
   }
-  body{
-    background-color: slategray
-  }
-  /* container */
+  p{margin-bottom: 0 !important;}
+.main-page .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
   .container-section{
     @apply w-11/12 m-auto;
+  }
+  .main-page{
+    @apply w-8/12 m-auto pt-5
+  }
+  .header-style{
+    @apply w-full py-5 flex justify-center
   }
 
   /* Scroll */
@@ -94,7 +102,5 @@
   .test{
     @apply bg-slate-50
   }
-  .lang-container{
-    
-  }
+  
 }

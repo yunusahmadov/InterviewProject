@@ -1,10 +1,7 @@
 import htmlLogo from '../assets/htmllogo.png'
 import csslogo from '../assets/csslogo.png'
 import jslogo from '../assets/jslogo.png'
-// import { useTranslation } from 'react-i18next';
 
-
-// const { t } = useTranslation();
 const languages={
     items:[
         {
@@ -37,4 +34,17 @@ const languages={
     ]
 }
 
-export {languages};
+const htmlQuestions={
+   questions:[
+    {
+        title:'What is HTML',
+        answer:'HTML stands for HyperText Markup Language. It is a standard markup language for web page creation. It allows the creation and structure of sections, paragraphs, and links using HTML elements (the building blocks of a web page) such as tags and attributes. '
+    },
+    {
+        title:'What is HTML',
+        answer:'HTML stands for HyperText Markup Language. It is a standard markup language for web page creation. It allows the creation and structure of sections, paragraphs, and links using HTML elements (the building blocks of a web page) such as tags and attributes. '
+    },
+   ]
+}
+
+export {languages,htmlQuestions};
