@@ -6,7 +6,7 @@ import MainPage from './components/Pages/MainPage'
 import HtmlPage from './components/Pages/HtmlPage'
 import CssPage from './components/Pages/CssPage'
 import JsPage from './components/Pages/JsPage'
-
+import './index.css'; 
 const App = () => {
 
 

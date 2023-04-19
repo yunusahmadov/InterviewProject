@@ -1,8 +1,15 @@
 import React from 'react'
+import PageFooter from './PageElems/PageFooter'
+import PageHeader from './PageElems/PageHeader'
+import PageMain from './PageElems/PageMain'
 
 function CssPage() {
   return (
-    <div>CssPage</div>
+    <>
+    <PageHeader />
+    <PageMain />
+    <PageFooter/> 
+ </>
   )
 }
 

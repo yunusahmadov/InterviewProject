@@ -1,8 +1,16 @@
 import React from 'react'
+import PageFooter from './PageElems/PageFooter'
+import PageHeader from './PageElems/PageHeader'
+import PageMain from './PageElems/PageMain'
 
 function JsPage() {
   return (
-    <div>JsPage</div>
+    <>
+    <PageHeader />
+    <PageMain />
+    <PageFooter /> 
+ </>
+
   )
 }
 
