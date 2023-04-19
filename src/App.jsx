@@ -1,21 +1,27 @@
 import React from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
-import { useTranslation } from "react-i18next";
+import { BrowserRouter, Routes , Route } from 'react-router-dom'
+import MainPage from './components/Pages/MainPage'
+import HtmlPage from './components/Pages/HtmlPage'
+import CssPage from './components/Pages/CssPage'
+import JsPage from './components/Pages/JsPage'
 
 const App = () => {
 
-  const {t,i18n}=useTranslation();
 
-  const changeLanguage=(language)=>{
-    i18n.changeLanguage(language)
-  }
 
   return (
-   <>
-   <Header changeLanguage={changeLanguage} />
-   <Main changeLanguage={changeLanguage}/>
-   </>
+<BrowserRouter>
+<Routes>
+      <Route path='/' element={<MainPage/>}/>
+
+      <Route path='/htmlpage' element={<HtmlPage/>}/>
+      <Route path='/cssPage' element={<CssPage/>}/>
+      <Route path='/jsPage' element={<JsPage/>}/>
+
+</Routes>
+</BrowserRouter>
   )
 }
 
