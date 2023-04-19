@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -9,6 +9,10 @@ import Select from '@mui/material/Select';
 const Header = ({ changeLanguage }) => {
   const { t } = useTranslation();
   const [lang,setLang]=useState('ru')
+
+  useEffect(() => {
+    setLang('ru')
+  }, [])
   function test(lang) {
     if (lang === 'ru') {
       changeLanguage('ru')

@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Link, useLocation, useParams } from 'react-router-dom'
 const FirstSection = ({ endpoint: { items }, changeLanguage }) => {
   const { t } = useTranslation();
   const location = useLocation();
-  console.log(location.pathname);
 
+
+  
   return (
     <section className='w-full'>
       <div className='container-section flex items-center justify-center mt-5'>
@@ -24,8 +25,8 @@ const FirstSection = ({ endpoint: { items }, changeLanguage }) => {
               </div>
               <p className='text-xl text-slate-900 break-words max-w-full py-5 '>{t("freq")}</p>
               
-              <Link to={`/${item.link}`}>
-              <button className={`button-theme ${item.btnColor} ${item.btnShadow}`}>
+              <Link target="_blank" to={`/${item.link}`}>
+              <button   className={`button-theme ${item.btnColor} ${item.btnShadow}`}>
               {t("start")}
               </button>
               </Link>
