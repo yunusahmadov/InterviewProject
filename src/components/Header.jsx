@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+
 
 const Header = ({ changeLanguage }) => {
   const { t } = useTranslation();
-
+  const [lang,setLang]=useState('ru')
   function test(lang) {
     if (lang === 'ru') {
       changeLanguage('ru')
+      setLang('ru')
     } else if (lang === 'en') {
       changeLanguage('en')
+      setLang('en')
+
     }
   }
   return (
@@ -18,24 +26,20 @@ const Header = ({ changeLanguage }) => {
           {t("headerText")}
         </h1>
       </div>
-      <div className="buttons absolute right-20 flex gap-4 items-center">
-        {/* <button onClick={() => changeLanguage('ru')} className='button-theme text-slate-100 font-bold bg-sky-400'>
-          RU
-        </button>
-        <button onClick={() => changeLanguage('en')} className='button-theme text-slate-100 font-bold bg-sky-400'>
-          ENG
-        </button> */}
-        <label for="language-select" class="text-slate-100 font-bold">
-          Select Language:
-        </label>
-        <select
-          id="language-select"
-          class="px-4 py-1 bg-sky-400 outline-none"
-          onChange={(e)=>test(e.target.value)}
-        >
-          <option value="ru">RU</option>
-          <option value="en">ENG</option>
-        </select>
+      <div className="buttons absolute right-20 w-40">
+        <FormControl className='w-10 border-white' fullWidth>
+  <InputLabel className="text-slate-100" id="demo-simple-select-label">Languages</InputLabel>
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    label="Age"
+    value={lang}
+    onChange={(e)=>test(e.target.value)}
+  >
+    <MenuItem className="text-slate-100 bg-sky-400" value={'ru'}>Ru</MenuItem>
+    <MenuItem value={'en'}>En</MenuItem>
+  </Select>
+</FormControl>
       </div>
     </header>
   );
