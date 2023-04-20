@@ -7,7 +7,7 @@ function AccordionElement({ children, eventKey }) {
 
   return (
     <button 
-      className='bg-green-400 p-1 rounded-md' 
+      className='bg-green-400 p-1 rounded-md ' 
       type="button"
       onClick={decoratedOnClick}
     >
