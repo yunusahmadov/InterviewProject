@@ -25,8 +25,8 @@ const FirstSection = ({ endpoint: { items }, changeLanguage }) => {
               </div>
               <p className='text-xl text-slate-900 break-words max-w-full py-5 '>{t("freq")}</p>
               
-              <Link target="_blank" to={`/${item.link}`}>
-              <button   className={`button-theme ${item.btnColor} ${item.btnShadow}`}>
+              <Link  target="_blank" to={`/${item.link}`}>
+              <button    className={`button-theme ${item.btnColor} ${item.btnShadow} text-white font-medium`}>
               {t("start")}
               </button>
               </Link>

@@ -11,47 +11,36 @@ import { htmlQuestions } from '../../../data/data';
 function PageMain({ test:{questions}} ) {
   console.log(questions.title);
   i18next.init({
-    lng: 'ru', // выберите язык, который будет использоваться по умолчанию
+    lng: 'en', 
     resources: {
       en: {
-        translation: enTranslation, // объект с переводами для английского языка
+        translation: enTranslation, 
       },
       ru: {
-        translation: ruTranslation, // объект с переводами для русского языка
+        translation: ruTranslation, 
       },
     },
   });
   return (
     <div className="w-full h-auto">
       <div className="main-page ">
-        {/* {
-          questions.map((item,index)=>{
-            return(
-              <div key={index}>
-                <Accordion defaultActiveKey="0" alwaysOpen>
-          <Card>
-            <Card.Header>
-              <p>{item.title}</p>
-              <AccordionElement eventKey="0">Click me!</AccordionElement>
-            </Card.Header>
-            <Accordion.Collapse eventKey="0">
-              <Card.Body>{item.answer}</Card.Body>
-            </Accordion.Collapse>
-          </Card>
-        </Accordion>
-              </div>
-            )
-          })
-        } */
-        htmlQuestions.questions.map((question) => (
-          <div key={question.title}>
-            <h3>{i18next.t(question.title)}</h3>
-            <p>{i18next.t(question.answer)}</p>
-          </div>
-        ))
+        {
+          htmlQuestions.questions.map((question) => (
+            <div key={question.title}>
+              <Accordion defaultActiveKey="0">
+                <Card>
+                  <Card.Header>
+                  <h3>{i18next.t(question.title)}</h3>
+                    <AccordionElement eventKey="0">Open Answer</AccordionElement>
+                  </Card.Header>
+                  <Accordion.Collapse eventKey="0">
+                    <Card.Body>{i18next.t(question.answer)}</Card.Body>
+                  </Accordion.Collapse>
+                </Card>
+              </Accordion>
+            </div>
+          ))
         }
-
-        
       </div>
     </div>
   );

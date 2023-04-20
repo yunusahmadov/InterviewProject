@@ -1,4 +1,6 @@
 {
-    "What is HTML": "What is HTML",
-    "HTML stands for HyperText Markup Language. It is a standard markup language for web page creation. It allows the creation and structure of sections, paragraphs, and links using HTML elements (the building blocks of a web page) such as tags and attributes. ": "HTML stands for HyperText Markup Language. It is a standard markup language for web page creation. It allows the creation and structure of sections, paragraphs, and links using HTML elements (the building blocks of a web page) such as tags and attributes."
-  }
+    "quest1": "What is HTML",
+    "answer1": "HTML stands for HyperText Markup Language. It is a standard markup language for web page creation. It allows the creation and structure of sections, paragraphs, and links using HTML elements (the building blocks of a web page) such as tags and attributes.",
+    "quest2": "What are the basic HTML tags?",
+    "answer2": "div , header , main , section , and footer are the main HTML5 tags for creating the semantic structure of a web page. You can also mention tags such as p, h1-h6, ul, ol, li, a, img, etc., which are used to create the content of a web page."
+}

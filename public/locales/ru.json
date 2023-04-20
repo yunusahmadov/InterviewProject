@@ -1,4 +1,6 @@
 {
-    "What is HTML": "Что такое HTML",
-    "HTML stands for HyperText Markup Language. It is a standard markup language for web page creation. It allows the creation and structure of sections, paragraphs, and links using HTML elements (the building blocks of a web page) such as tags and attributes. ": "HTML (от англ. HyperText Markup Language) — стандартный язык разметки веб-страниц. Он позволяет создавать и структурировать разделы, абзацы и ссылки с помощью элементов HTML (строительных блоков веб-страниц), таких как теги и атрибуты."
+    "quest1": "Что такое HTML",
+    "answer1": "HTML (от англ. HyperText Markup Language) — стандартный язык разметки веб-страниц. Он позволяет создавать и структурировать разделы, абзацы и ссылки с помощью элементов HTML (строительных блоков веб-страниц), таких как теги и атрибуты.",
+    "quest2": "Какие основные теги HTML вы знаете?",
+    "answer2": "div, header, main, section и footer - это основные теги HTML5 для создания семантической структуры веб-страницы. Также можно упомянуть теги, такие как p, h1-h6, ul, ol, li, a, img и т.д., которые используются для создания содержимого веб-страницы."
   }
