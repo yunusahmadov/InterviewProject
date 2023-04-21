@@ -1,3 +1,4 @@
 # InterviewProject
-Website which help to prepare for an interview.Now it's only Html questions on Russian and English languages.In future updates i'll add Redux  to control language on all pages ,and Azerbaijani language
+Website which help to prepare for an interview.Html questions are now available in Russian and English
+.In future updates i'll add Redux  to control language on all pages ,and Azerbaijani language
 
