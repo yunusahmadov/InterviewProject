@@ -1,6 +1,8 @@
 import htmlLogo from '../assets/htmllogo.png'
 import csslogo from '../assets/csslogo.png'
 import jslogo from '../assets/jslogo.png'
+import code1 from '../assets/code1.png'
+
 
 const languages={
     items:[
@@ -42,10 +44,20 @@ const htmlQuestions={
     },
     {
         title:'quest2',
-        img:jslogo
+        answer:'answer2'
     },
 
    ]
 }
+const cssQuestions={
+    questions:[
+     {
+         title:'cssq1',
+         answer:'cssq1answer',
+         img:code1
+     },
 
-export {languages,htmlQuestions};
+    ]
+ }
+
+export {languages,htmlQuestions,cssQuestions};

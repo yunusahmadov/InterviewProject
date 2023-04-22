@@ -13,7 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-function PageMain({ test:{questions}} ) {
+function PageMain({ test:{questions},langType} ) {
   const [lang,setLang]=useState('')
   useEffect(() => {
     setLang('ru')
@@ -39,7 +39,7 @@ function PageMain({ test:{questions}} ) {
     },
   });
   return (
-    <div className="w-full h-auto mt-5">
+    <div className="w-full h-auto mt-5 mb-5">
 <div className='absolute right-0 top-[70px]'>
 <FormControl className='w-32  border-white ' >
     <InputLabel className="text-slate-100" id="demo-simple-select-label ">Languages</InputLabel>
@@ -58,7 +58,7 @@ function PageMain({ test:{questions}} ) {
       <div className="main-page md:w-11/12   ">
         
         {
-          htmlQuestions.questions.map((question) => (
+          langType.questions.map((question) => (
             <div key={question.title} className='mt-2  w-full'>
               <Accordion defaultActiveKey="0">
                 <Card>
@@ -70,8 +70,10 @@ function PageMain({ test:{questions}} ) {
                   </Card.Header>
                   <Accordion.Collapse eventKey="1">
                     <Card.Body>
-                      {i18next.t(question?.answer)}
-                      <img src={question.img} alt="" />
+                          <div className='flex flex-col items-center'>
+                          {i18next.t(question?.answer)}
+                             <img className='w-4/12 h-auto pt-10' src={question?.img} alt={`${question?.img}`} />
+                          </div>
                     </Card.Body>
                     
                   </Accordion.Collapse>

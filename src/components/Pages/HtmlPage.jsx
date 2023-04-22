@@ -8,8 +8,8 @@ function HtmlPage() {
   console.log(htmlQuestions);
   return (
    <>
-      <PageHeader color={'from-orange-400 to-orange-600'} />
-      <PageMain test={htmlQuestions}/>
+      <PageHeader headerText={'HTML'} color={'from-orange-400 to-orange-600'} />
+      <PageMain test={htmlQuestions} langType={htmlQuestions}/>
       <PageFooter /> 
    </>
 

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function PageHeader({color}) {
+function PageHeader({color,headerText}) {
   return (
    <header className={`header-style bg-gradient-to-b ${color}`}>
-    HTML
+    {headerText}
    </header>
   )
 }

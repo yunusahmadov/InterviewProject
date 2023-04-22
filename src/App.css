@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+
+p {
+  color: red;
+}
+.my-class {
+  font-weight: bold;
+}
+#my-id {
+  background-color: yellow;
+}
