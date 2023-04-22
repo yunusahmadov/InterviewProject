@@ -4,8 +4,8 @@ import Card from 'react-bootstrap/Card';
 import AccordionElement from './AccordionElement';
 import '../../../index.css';
 import i18next from 'i18next';
-import enTranslation from '../../../../public/locales/en.json';
-import ruTranslation from '../../../../public/locales/ru.json';
+import enQuest from '../../../../public/locales/en.js';
+import ruQuest from '../../../../public/locales/ru.js';
 import { htmlQuestions } from '../../../data/data';
 import SelectItem from './SelectItem';
 import InputLabel from '@mui/material/InputLabel';
@@ -31,10 +31,10 @@ function PageMain({ test:{questions},langType} ) {
     lng: lang, 
     resources: {
       en: {
-        translation: enTranslation, 
+        translation: enQuest,
       },
       ru: {
-        translation: ruTranslation, 
+        translation: ruQuest,
       },
     },
   });
@@ -70,9 +70,14 @@ function PageMain({ test:{questions},langType} ) {
                   </Card.Header>
                   <Accordion.Collapse eventKey="1">
                     <Card.Body>
-                          <div className='flex flex-col items-center'>
-                          {i18next.t(question?.answer)}
-                             <img className='w-4/12 h-auto pt-10' src={question?.img} alt={`${question?.img}`} />
+                      {/* Если не использовать свойство whitespace-pre-wrap,то переносы /n работать не будут */}
+                          <div className={`flex flex-col ${question.img ? 'items-center' : 'items-start'} whitespace-pre-wrap`}>
+                          <p className='font-medium '>{i18next.t(question?.answer)}</p>
+                          {
+                            question.img?
+                            <img className='w-4/12 h-auto pt-10' src={question.img} alt={`${question?.img}`} />:null
+
+                          }
                           </div>
                     </Card.Body>
                     

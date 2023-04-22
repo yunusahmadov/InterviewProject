@@ -60,4 +60,15 @@ const cssQuestions={
     ]
  }
 
-export {languages,htmlQuestions,cssQuestions};
+ const JsQuestions={
+    questions:[
+     {
+         title:'jsq1',
+         answer:'jsq1answer',
+     },
+
+    ]
+ }
+
+
+export {languages,htmlQuestions,cssQuestions,JsQuestions};
