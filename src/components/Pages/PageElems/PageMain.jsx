@@ -55,21 +55,25 @@ function PageMain({ test:{questions}} ) {
     </Select>
   </FormControl>
 </div>
-      <div className="main-page md:w-11/12  ">
+      <div className="main-page md:w-11/12   ">
         
         {
           htmlQuestions.questions.map((question) => (
-            <div key={question.title} className='mt-2 w-full'>
+            <div key={question.title} className='mt-2  w-full'>
               <Accordion defaultActiveKey="0">
                 <Card>
                   <Card.Header>
                   <h3 className='xl:text-xl lg:text-lg'>{i18next.t(question.title)}</h3>
                     <AccordionElement eventKey="1" >
-                      <p className='lg:text-xs'>Open Answer</p>
+                     
                     </AccordionElement>
                   </Card.Header>
                   <Accordion.Collapse eventKey="1">
-                    <Card.Body>{i18next.t(question.answer)}</Card.Body>
+                    <Card.Body>
+                      {i18next.t(question?.answer)}
+                      <img src={question.img} alt="" />
+                    </Card.Body>
+                    
                   </Accordion.Collapse>
                 </Card>
               </Accordion>
