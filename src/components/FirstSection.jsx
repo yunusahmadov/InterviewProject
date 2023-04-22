@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Link, useLocation, useParams } from 'react-router-dom'
+import DarkModeBtn from './DarkModeBtn';
 const FirstSection = ({ endpoint: { items }, changeLanguage }) => {
   const { t } = useTranslation();
   const location = useLocation();
@@ -10,6 +11,7 @@ const FirstSection = ({ endpoint: { items }, changeLanguage }) => {
   
   return (
     <section className='w-full'>
+      {/* <DarkModeBtn/> */}
       <div className='container-section flex items-center justify-center mt-5'>
         <h1 className='font-medium text-2xl font-popins lg:text-xl md:text-lg sm:m-0 text-center text-slate-600'>
           {t('websiteText')}
