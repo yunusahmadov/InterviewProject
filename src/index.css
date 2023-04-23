@@ -108,5 +108,7 @@
   .dark-mode {
     background-color: #000;
   }
-  
+  .description-style{
+    @apply font-normal text-2xl
+  }
 }

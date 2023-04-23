@@ -13,7 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-function PageMain({ test:{questions},langType} ) {
+function PageMain({ test:{questions},langType,description1,description2} ) {
   const [lang,setLang]=useState('')
   useEffect(() => {
     setLang('ru')
@@ -71,12 +71,25 @@ function PageMain({ test:{questions},langType} ) {
                   <Accordion.Collapse eventKey="1">
                     <Card.Body>
                       {/* Если не использовать свойство whitespace-pre-wrap,то переносы /n работать не будут */}
-                          <div className={`flex flex-col ${question.img ? 'items-center' : 'items-start'} whitespace-pre-wrap`}>
+                          <div className={`flex flex-col items-start whitespace-pre-wrap`}>
                           <p className='font-medium '>{i18next.t(question?.answer)}</p>
+
+                          {/* Description if need */}
+                          {
+                          question.description1?
+                          <h1 className='description-style'>1){i18next.t(question.description1)}</h1>:null
+                          }
                           {
                             question.img?
-                            <img className='w-4/12 h-auto pt-10' src={question.img} alt={`${question?.img}`} />:null
-
+                            <img className='w-4/12 h-auto pt-10 m-auto' src={question.img} alt={`${question?.img}`} />:null
+                          }
+                               {
+                          question.description2?
+                          <h1 className='description-style mt-4'>2){i18next.t(question.description2)}</h1>:null
+                          }
+                          {
+                            question.img2?
+                            <img className='w-4/12 h-auto pt-10 m-auto' src={question.img2} alt={`${question?.img2}`} />:null
                           }
                           </div>
                     </Card.Body>

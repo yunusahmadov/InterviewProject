@@ -7,6 +7,11 @@ const enQuest={
     "cssq1": "What is a CSS selector?",
     "cssq1answer":"A CSS (Cascading Style Sheets) selector is part of a CSS rule that determines which HTML elements on the page will be styled by that rule. Selectors select elements based on their tag name, attributes, classes, or IDs.",
     "jsq1":"What data types exist in JavaScript?",
-    "jsq1answer":"Primitive data types:\nNumbers: represents both whole and fractional, numbers;\nStrings: represents text data;\nBooleans: represents true (true) or false (false);\nNull: represents absence values;\nUndefined: represents the absence of a value definition;\nSymbol (introduced in ECMAScript 6): represents a unique and immutable identifier. values;\nFunctions: used to perform specific tasks;\nDates: represent dates and times;\nRegular expressions: used to work with text, perform search and replace."
+    "jsq1answer":"Primitive data types:\nNumbers: represents both whole and fractional, numbers;\nStrings: represents text data;\nBooleans: represents true (true) or false (false);\nNull: represents absence values;\nUndefined: represents the absence of a value definition;\nSymbol (introduced in ECMAScript 6): represents a unique and immutable identifier. values;\nFunctions: used to perform specific tasks;\nDates: represent dates and times;\nRegular expressions: used to work with text, perform search and replace.",
+    "jsq2":"Get even numbers from array",
+    "jsq3":"Array of strings to array of numbers",
+    "jsq3desc":" Variant with map",
+    "jsq3desc2":"Variant with 'for' "
+    
 }
 export default enQuest
