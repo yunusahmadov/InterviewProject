@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeStateValue } from '../reduxx/MainReducer';
 
 import { Link, useLocation, useParams } from 'react-router-dom'
 import DarkModeBtn from './DarkModeBtn';
@@ -8,22 +10,39 @@ import DarkModeBtn from './DarkModeBtn';
 const FirstSection = ({ endpoint: { items }, changeLanguage }) => {
   const { t } = useTranslation();
   const location = useLocation();
-  const [darkTheme,setDarkTheme]=useState("light")
-
+  // const [darkTheme,setDarkTheme]=useState("light")
+  const darkTheme=useSelector(state=>state.Data.darkTheme)
+  const dispatch=useDispatch()
   const toggleTheme=()=>{
-    setDarkTheme(!darkTheme)
+    if (darkTheme) {
+      dispatch(
+        changeStateValue({
+          name:'darkTheme',
+          value:false
+        })
+      )
+    }else{
+      dispatch(
+        changeStateValue({
+          name:'darkTheme',
+          value:true
+        })
+      )
+    }
   }
 
   console.log(darkTheme);
 
   return (
-    <section className={`w-full bg ${darkTheme? 'bg-slate-800':'bg-white'}`}>
-      <button onClick={toggleTheme} className='bg-green-200 p-2 rounded-xl'>
-        Dark Mode
+    <section className={`w-full bg transition-all duration-700 ${darkTheme? 'bg-slate-800':'bg-white '}`}>
+      <button onClick={toggleTheme} className='bg-green-200 p-2 rounded-xl '>
+       {
+        darkTheme? " Dark Mode": " Light Mode"
+       }
       </button>
       {/* <DarkModeBtn/> */}
       <div className='container-section flex items-center justify-center mt-5'>
-        <h1  className={`${darkTheme? 'text-white':'text-slate-900'} font-medium text-2xl font-popins lg:text-xl md:text-lg sm:m-0 text-center`}>
+        <h1  className={`${darkTheme? 'text-white':'text-slate-900'} transition-all duration-700 font-medium text-2xl font-popins lg:text-xl md:text-lg sm:m-0 text-center`}>
           {t('websiteText')}
         </h1>
       </div>
@@ -31,14 +50,14 @@ const FirstSection = ({ endpoint: { items }, changeLanguage }) => {
         {items.map((item, index) => {
           return (
             <div key={index} className={`bg-gradient-to-b ${item.color} ${item.shadow} rounded-lg p-6 mb-4`}>
-              <div className='flex justify-between items-center text-slate-100'>
-                <h2 className='text-2xl font-bold'>{item.title}</h2>
+              <div className='flex justify-between items-center'>
+                <h2 className={`${darkTheme? 'text-white':'text-slate-900'} transition-all duration-700 font-medium text-3xl font-popins md:text-2xl sm:m-0 text-center`}>{item.title}</h2>
                 <img className='w-12 h-12 object-contain' src={item.logo} alt='' />
               </div>
-              <p className='text-xl text-slate-900 break-words max-w-full py-5 '>{t("freq")}</p>
+              <p className={`'text-xl text-slate-900 break-words max-w-full py-5 transition-all duration-700 ${darkTheme? 'text-white':'text-slate-900'} '`}>{t("freq")}</p>
               
               <Link  target="_blank" to={`/${item.link}`}>
-              <button className={`button-theme ${item.btnColor} ${item.btnShadow} text-slate-100 font-bold`}>
+              <button className={`button-theme ${item.btnColor} ${item.btnShadow} text-slate-100 font-bold ${darkTheme? 'text-white':'text-slate-900'} transition-all duration-700 `}>
               {t("start")}
               </button>
               </Link>
