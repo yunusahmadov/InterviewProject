@@ -4,8 +4,9 @@ import { languages } from '../data/data'
 const Main = ({changeLanguage}) => {
   
   return (
-   <main>
+   <main >
     <FirstSection endpoint={languages} changeLanguage={changeLanguage}/>
+
    </main>
   )
 }
