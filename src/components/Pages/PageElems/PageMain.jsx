@@ -81,7 +81,7 @@ function PageMain({ test:{questions},langType,description1,description2} ) {
                           }
                           {
                             question.img?
-                            <img className='w-4/12 h-auto pt-10 m-auto' src={question.img} alt={`${question?.img}`} />:null
+                            <img className='w-1/2 rounded-2xl h-auto mt-5 m-auto' src={question.img} alt={`${question?.img}`} />:null
                           }
                                {
                           question.description2?
@@ -89,7 +89,7 @@ function PageMain({ test:{questions},langType,description1,description2} ) {
                           }
                           {
                             question.img2?
-                            <img className='w-4/12 h-auto pt-10 m-auto' src={question.img2} alt={`${question?.img2}`} />:null
+                            <img className='w-1/2 h-auto pt-10 m-auto' src={question.img2} alt={`${question?.img2}`} />:null
                           }
                           </div>
                     </Card.Body>
