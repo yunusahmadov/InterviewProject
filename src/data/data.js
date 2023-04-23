@@ -5,6 +5,10 @@ import code1 from "../assets/code1.png";
 import jsq2 from "../assets/jsq2.png";
 import jsq3 from "../assets/jsq3.png";
 import jsq3var2 from "../assets/jsq3var2.png";
+import jsq4 from "../assets/jsq4.png";
+import jsq4var2 from "../assets/jsq4var2.png";
+
+
 
 
 
@@ -79,7 +83,14 @@ const JsQuestions = {
         description1:"jsq3desc",
         description2:"jsq3desc2",
         img2: jsq3var2,
-      },
+    },
+    {
+      title: "jsq4",
+      img: jsq4,
+      description1:"jsq4desc",
+      description2:"jsq4desc2",
+      img2: jsq4var2,
+    },
   ],
 };
 

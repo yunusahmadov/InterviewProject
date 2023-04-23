@@ -9,9 +9,12 @@ const enQuest={
     "jsq1":"What data types exist in JavaScript?",
     "jsq1answer":"Primitive data types:\nNumbers: represents both whole and fractional, numbers;\nStrings: represents text data;\nBooleans: represents true (true) or false (false);\nNull: represents absence values;\nUndefined: represents the absence of a value definition;\nSymbol (introduced in ECMAScript 6): represents a unique and immutable identifier. values;\nFunctions: used to perform specific tasks;\nDates: represent dates and times;\nRegular expressions: used to work with text, perform search and replace.",
     "jsq2":"Get even numbers from array",
-    "jsq3":"Array of strings to array of numbers",
+    "jsq3":"Convert array of strings to array of numbers",
     "jsq3desc":" Variant with map",
-    "jsq3desc2":"Variant with 'for' "
+    "jsq3desc2":"Variant with 'for' ",
+    "jsq4":"Convert array of numbers to array of strings",
+    "jsq4desc":"Variant with toString()",
+    "jsq4desc2":" Variant with '+' operator ",
     
 }
 export default enQuest

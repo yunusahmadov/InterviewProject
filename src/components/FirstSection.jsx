@@ -1,19 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Link, useLocation, useParams } from 'react-router-dom'
 import DarkModeBtn from './DarkModeBtn';
+
+
 const FirstSection = ({ endpoint: { items }, changeLanguage }) => {
   const { t } = useTranslation();
   const location = useLocation();
+  const [darkTheme,setDarkTheme]=useState("light")
 
+  const toggleTheme=()=>{
+    setDarkTheme(!darkTheme)
+  }
 
-  
+  console.log(darkTheme);
+
   return (
-    <section className='w-full'>
+    <section className={`w-full bg ${darkTheme? 'bg-slate-800':'bg-white'}`}>
+      <button onClick={toggleTheme} className='bg-green-200 p-2 rounded-xl'>
+        Dark Mode
+      </button>
       {/* <DarkModeBtn/> */}
       <div className='container-section flex items-center justify-center mt-5'>
-        <h1 className='font-medium text-2xl font-popins lg:text-xl md:text-lg sm:m-0 text-center text-slate-600'>
+        <h1  className={`${darkTheme? 'text-white':'text-slate-900'} font-medium text-2xl font-popins lg:text-xl md:text-lg sm:m-0 text-center`}>
           {t('websiteText')}
         </h1>
       </div>
@@ -28,7 +38,7 @@ const FirstSection = ({ endpoint: { items }, changeLanguage }) => {
               <p className='text-xl text-slate-900 break-words max-w-full py-5 '>{t("freq")}</p>
               
               <Link  target="_blank" to={`/${item.link}`}>
-              <button    className={`button-theme ${item.btnColor} ${item.btnShadow} text-white font-medium`}>
+              <button className={`button-theme ${item.btnColor} ${item.btnShadow} text-slate-100 font-bold`}>
               {t("start")}
               </button>
               </Link>
