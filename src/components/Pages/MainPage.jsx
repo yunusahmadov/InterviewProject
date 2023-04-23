@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from "react-i18next";
 import Header from '../Header';
 import Main from '../Main';
+import PageFooter from './PageElems/PageFooter';
 
 
 function MainPage() {
@@ -14,6 +15,7 @@ function MainPage() {
    <>
    <Header changeLanguage={changeLanguage} />
    <Main changeLanguage={changeLanguage}/>
+   <PageFooter/>
    </>
   )
 }
