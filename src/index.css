@@ -9,19 +9,28 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
   }
-  body{
+  /* body{
     background-color: green;
-  }
+  } */
   p{margin-bottom: 0 !important;}
 .main-page .card-header {
   display: flex;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
+  /* background-color:#1e293b !important; */
+  background-color:#77808f !important;
 }
-/* .main-page .card-body{
+.main-page .card{
+  border: none
+}
+.--bs-card-bg{
 
-} */
+}
+.main-page .card-body{
+  /* border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
 
+}
   .container-section{
     @apply w-11/12 m-auto;
   }
@@ -30,6 +39,9 @@
   }
   .header-style{
     @apply w-full py-5 flex justify-center
+  }
+  .header-inner-style{
+    @apply w-1/2  flex justify-center
   }
 
   /* Scroll */
