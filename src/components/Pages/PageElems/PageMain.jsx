@@ -12,8 +12,12 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { useSelector } from 'react-redux';
+import DarkLightBtn from './DarkLightBtn';
 
 function PageMain({ test:{questions},langType,description1,description2} ) {
+  const darkTheme=useSelector(state=>state.Data.darkTheme)
+
   const [lang,setLang]=useState('')
   useEffect(() => {
     setLang('ru')
@@ -26,6 +30,7 @@ function PageMain({ test:{questions},langType,description1,description2} ) {
 
     }
   }
+  
 
   i18next.init({
     lng: lang, 
@@ -39,8 +44,9 @@ function PageMain({ test:{questions},langType,description1,description2} ) {
     },
   });
   return (
-    <div className="w-full h-auto mt-5 mb-5">
-<div className='absolute right-0 top-[70px]'>
+    <div className={`w-full h-auto pb-5 transition-all duration-700 ${darkTheme?'bg-slate-800':'bg-slate-200'}`}>
+<div className='w-full flex items-center justify-between px-5'>
+<div className='absolute top-1 right-5'>
 <FormControl className='w-32  border-white ' >
     <InputLabel className="text-slate-100" id="demo-simple-select-label ">Languages</InputLabel>
     <Select
@@ -53,31 +59,34 @@ function PageMain({ test:{questions},langType,description1,description2} ) {
       <MenuItem className="text-slate-100 bg-sky-400" value={'ru'}>Ru</MenuItem>
       <MenuItem value={'en'}>En</MenuItem>
     </Select>
-  </FormControl>
+</FormControl>
+</div>
+
 </div>
       <div className="main-page md:w-11/12   ">
         
         {
           langType.questions.map((question) => (
-            <div key={question.title} className='mt-2  w-full'>
+            <div key={question.title} className='mt-2  w-full border-0 '>
               <Accordion defaultActiveKey="0">
                 <Card>
-                  <Card.Header>
-                  <h3 className='xl:text-xl lg:text-lg'>{i18next.t(question.title)}</h3>
-                    <AccordionElement eventKey="1" >
+                  <Card.Header className={`${darkTheme ? 'text-white' : 'text-white'}`}>
+                  {/* <Card.Header className='bg-red-900'> */}
+                  <h3 className={`'xl:text-xl lg:text-lg mb-0' ${darkTheme ? 'text-slate-100' : 'text-slate-900'}`}>{i18next.t(question.title)}</h3>
+                    <AccordionElement  eventKey="1"  >
                      
                     </AccordionElement>
                   </Card.Header>
                   <Accordion.Collapse eventKey="1">
-                    <Card.Body>
+                    <Card.Body className={`${darkTheme ? 'bg-slate-800' : 'bg-slate-300'}`}>
                       {/* Если не использовать свойство whitespace-pre-wrap,то переносы /n работать не будут */}
                           <div className={`flex flex-col items-start whitespace-pre-wrap`}>
-                          <p className='font-medium '>{i18next.t(question?.answer)}</p>
+                          <p className={`font-medium ${darkTheme ? 'text-slate-100' : 'text-slate-900'}`}>{i18next.t(question?.answer)}</p>
 
                           {/* Description if need */}
                           {
                           question.description1?
-                          <h1 className='description-style'>1){i18next.t(question.description1)}</h1>:null
+                          <h3 className={`description-style ${darkTheme ? 'text-slate-100' : 'text-slate-900'}`}>1){i18next.t(question.description1)}</h3>:null
                           }
                           {
                             question.img?
@@ -85,7 +94,7 @@ function PageMain({ test:{questions},langType,description1,description2} ) {
                           }
                                {
                           question.description2?
-                          <h1 className='description-style mt-4'>2){i18next.t(question.description2)}</h1>:null
+                          <h3 className={`description-style mt-5 ${darkTheme ? 'text-slate-100' : 'text-slate-900'}`}>2){i18next.t(question.description2)}</h3>:null
                           }
                           {
                             question.img2?

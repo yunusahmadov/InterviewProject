@@ -10,10 +10,11 @@ const FirstSection = ({ endpoint: { items }, changeLanguage }) => {
   const { t } = useTranslation();
   const location = useLocation();
   const darkTheme=useSelector(state=>state.Data.darkTheme)
+
+
   return (
     <section className={`w-full bg transition-all duration-700 ${darkTheme? 'bg-slate-800':'bg-white '} h-[90vh] xl:h-[100vh] lg:h-auto`}>
-        <DarkLightBtn/>
-      <div className='container-section flex items-center justify-center mt-5'>
+      <div className='container-section flex items-center justify-center pt-5'>
         <h1  className={`${darkTheme? 'text-white':'text-slate-900'} transition-all duration-700 font-medium text-2xl font-popins lg:text-xl md:text-lg sm:m-0 text-center`}>
           {t('websiteText')}
         </h1>

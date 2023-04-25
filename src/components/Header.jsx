@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SelectItem from './Pages/PageElems/SelectItem';
+import DarkLightBtn from './Pages/PageElems/DarkLightBtn';
 
 
 
@@ -12,6 +13,7 @@ const Header = ({ changeLanguage }) => {
         <h1 className="font-medium text-slate-200 text-4xl lg:text-3xl md:text-2xl xsm:text-xl pl-2">
           {t("headerText")}
         </h1>
+        <DarkLightBtn />
       </div>
       <div className="buttons absolute right-20 w-40 lg:right-10 lg:w-28 md:w-24 md:right-5 sm:static pr-5 "> 
       <SelectItem changeLanguage={changeLanguage}/>
