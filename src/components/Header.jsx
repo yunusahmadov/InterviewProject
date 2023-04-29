@@ -8,7 +8,7 @@ import DarkLightBtn from './Pages/PageElems/DarkLightBtn';
 const Header = ({ changeLanguage }) => {
   const { t } = useTranslation();
   return (
-    <header className="w-full h-20 bg-theme flex items-center justify-center relative sm:gap-5">
+    <header className="w-full h-20 bg-theme flex items-center justify-center relative sm:gap-5 relative">
       <div className="container-section flex items-center justify-center">
         <h1 className="font-medium text-slate-200 text-4xl lg:text-3xl md:text-2xl xsm:text-xl pl-2">
           {t("headerText")}

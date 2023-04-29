@@ -50,10 +50,14 @@ const htmlQuestions = {
     {
       title: "quest1",
       answer: "answer1",
+      level:'junior'
+
     },
     {
       title: "quest2",
       answer: "answer2",
+      level:'junior'
+
     },
   ],
 };
@@ -63,6 +67,8 @@ const cssQuestions = {
       title: "cssq1",
       answer: "cssq1answer",
       img: code1,
+      level:'junior'
+
     },
   ],
 };
@@ -72,10 +78,12 @@ const JsQuestions = {
     {
       title: "jsq1",
       answer: "jsq1answer",
+      level:'junior'
     },
     {
       title: "jsq2",
       img: jsq2,
+      level:'junior'
     },
     {
         title: "jsq3",
@@ -83,6 +91,8 @@ const JsQuestions = {
         description1:"jsq3desc",
         description2:"jsq3desc2",
         img2: jsq3var2,
+      level:'junior'
+
     },
     {
       title: "jsq4",
@@ -90,6 +100,7 @@ const JsQuestions = {
       description1:"jsq4desc",
       description2:"jsq4desc2",
       img2: jsq4var2,
+      level:'junior'
     },
   ],
 };
