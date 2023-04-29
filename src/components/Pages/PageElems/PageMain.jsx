@@ -72,9 +72,16 @@ function PageMain({ test:{questions},langType,description1,description2} ) {
                 <Card>
                   <Card.Header className={`${darkTheme ? 'text-white' : 'text-white'}`}>
                   {/* <Card.Header className='bg-red-900'> */}
-                  <h3 className={`'xl:text-xl lg:text-lg mb-0' ${darkTheme ? 'text-slate-100' : 'text-slate-900'}`}>{i18next.t(question.title)}</h3>
+                  <h3 className={`'xl:text-xl lg:text-lg mb-0 ' ${darkTheme ? 'text-slate-100' : 'text-slate-900'}`}>{i18next.t(question.title)} </h3>
+                  {
+                    question.level=='junior'?
+                  <h4 className='mb-0 xl:text-lg lg:text-md text-green-500'>{question.level}</h4>:
+                  question.level=='middle'?
+                  <h4 className='mb-0 xl:text-lg lg:text-md text-yellow-400'>{question.level}</h4>:
+                  null
+                  }
                     <AccordionElement  eventKey="1"  >
-                     
+          
                     </AccordionElement>
                   </Card.Header>
                   <Accordion.Collapse eventKey="1">

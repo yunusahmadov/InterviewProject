@@ -24,7 +24,7 @@ function DarkLightBtn({visibility}) {
           localStorage.setItem('darkTheme', darkTheme.toString());
       }
   return (
-    <button onClick={toggleTheme} className={`rounded-xl ${visibility} bg-green-700 p-2`}>
+    <button onClick={toggleTheme} className={`rounded-xl ml-2 ${visibility} p-2 ${darkTheme?'bg-white':'bg-black text-white '}`}>
     {
      darkTheme? " Dark Mode": " Light Mode"
     }
