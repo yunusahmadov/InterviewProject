@@ -7,6 +7,12 @@ import jsq3 from "../assets/jsq3.png";
 import jsq3var2 from "../assets/jsq3var2.png";
 import jsq4 from "../assets/jsq4.png";
 import jsq4var2 from "../assets/jsq4var2.png";
+import jsq5 from "../assets/jsq5.png";
+import jsq5var2 from "../assets/jsq5var2.png";
+import jsq6 from "../assets/jsq6.png";
+import jsq6var2 from "../assets/jsq6var2.png";
+
+
 
 
 
@@ -101,6 +107,22 @@ const JsQuestions = {
       description2:"jsq4desc2",
       img2: jsq4var2,
       level:'junior'
+    },
+    {
+      title: "jsq5",
+      answer: "jsq5answer",
+      img: jsq5,
+      img2: jsq5var2,
+      level:'middle'
+    },
+    {
+      title: "jsq6",
+      answer: "jsq6answer",
+      img: jsq6,
+      description1:"jsq6desc",
+      description2:"jsq6desc2",
+      img2: jsq6var2,
+      level:'middle'
     },
   ],
 };
