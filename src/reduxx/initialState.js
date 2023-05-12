@@ -1,4 +1,5 @@
 //Global state
 export const initialStates={
-    darkTheme:false
+    darkTheme:false,
+    language:'ru'
 }
